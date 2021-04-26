@@ -3,10 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { CssBaseline } from '@material-ui/core';
+import { ContextProvider } from './UIContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ContextProvider>
+      <CssBaseline />
+      <App />
+    </ContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
